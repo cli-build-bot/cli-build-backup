@@ -40,6 +40,11 @@ jobs:
       - name: Android环境
         uses: android-actions/setup-android@v3
 
+      - name: Flutter环境
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.5'
+
       - name: Node.js环境
         uses: actions/setup-node@v4
         with:
