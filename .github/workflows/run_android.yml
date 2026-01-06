@@ -61,5 +61,7 @@ jobs:
           git config --local --name-only --get-regexp 'http.https://github.com/.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
 
       - name: 开始构建
+        env:
+          ORG_GRADLE_PROJECT_http_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         run: |
           ./easy_cli.exe -s "${{ github.event.inputs.params }}"
